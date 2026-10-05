@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --soft-dark: #0a0a0b;
+  --warm-black: #1c1917;
+  --panel: #121214;
+  --panel-raised: #17171a;
+  --paper: #f6f3ee;
+  --mute: #8b93a7;
+  --gain: #3d9a6a;
+  --loss: #c45b5b;
+  --muted-border: rgba(255, 255, 255, 0.08);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  color: #e7e5e4;
+  background: var(--soft-dark);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+code,
+.font-mono {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+::selection {
+  background: rgba(61, 154, 106, 0.28);
+  color: var(--paper);
+}
+
+@layer components {
+  .ledger-card {
+    @apply rounded-2xl border border-white/[0.07] bg-[color:var(--panel)];
+  }
+}
+
+@layer utilities {
+  .text-paper {
+    color: var(--paper);
+  }
+  .text-mute {
+    color: var(--mute);
+  }
+  .text-gain {
+    color: var(--gain);
+  }
+  .text-loss {
+    color: var(--loss);
+  }
+  .bg-panel {
+    background-color: var(--panel);
+  }
+  .bg-gain {
+    background-color: var(--gain);
+  }
+}
